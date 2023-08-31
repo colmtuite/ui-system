@@ -2,26 +2,17 @@ import classNames from "classnames";
 import * as React from "react";
 import { Margin, withMargin } from "../helpers";
 
-interface BadgeOwnProps {
+interface StatusOwnProps {
   size?: "1" | "2";
-  color?:
-    | "gray"
-    | "purple"
-    | "blue"
-    | "green"
-    | "yellow"
-    | "red"
-    | "orange"
-    | "bronze"
-    | "gold";
+  color?: "gray" | "green" | "yellow" | "red" | "white";
 }
 
-interface BadgeProps
+interface StatusProps
   extends Omit<React.ComponentPropsWithRef<"span">, "color">,
-    BadgeOwnProps,
+    StatusOwnProps,
     Margin {}
 
-export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
+export const Status = React.forwardRef<HTMLSpanElement, StatusProps>(
   (
     {
       m,
@@ -42,20 +33,16 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
       ref={forwardedRef}
       className={classNames(
         className,
-        "Badge",
+        "Status",
         withMargin({ m, mx, my, mt, mr, mb, ml }),
         {
           "size-1": size === "1",
           "size-2": size === "2",
           gray: color === "gray",
-          purple: color === "purple",
-          blue: color === "blue",
           green: color === "green",
           yellow: color === "yellow",
           red: color === "red",
-          orange: color === "orange",
-          bronze: color === "bronze",
-          gold: color === "gold",
+          white: color === "white",
         }
       )}
       {...props}
@@ -63,4 +50,4 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
   )
 );
 
-Badge.displayName = "Badge";
+Status.displayName = "Status";
