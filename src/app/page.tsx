@@ -12,7 +12,16 @@ import {
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ padding: 100 }}>
+      <div
+        style={{
+          position: "fixed",
+          height: "100vh",
+          width: 1,
+          left: "50%",
+          backgroundColor: "var(--gray-4)",
+        }}
+      ></div>
       <Section>
         <Container>
           <Grid columns="2" gap="9">
@@ -137,10 +146,13 @@ export default function Home() {
         style={{
           width: 250,
           height: 80,
-          borderRadius: 6,
+          borderRadius: 12,
           borderWidth: 1,
           borderStyle: "solid",
-          borderColor: "var(--gray-a7)",
+          borderTopColor: "var(--gray-4)",
+          borderLeftColor: "var(--gray-6)",
+          borderRightColor: "var(--gray-6)",
+          borderBottomColor: "var(--gray-7)",
           background: "white",
         }}
       >
