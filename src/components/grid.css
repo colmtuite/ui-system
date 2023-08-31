@@ -1,0 +1,4 @@
+.Grid {
+  box-sizing: border-box;
+  display: grid;
+}

@@ -1,0 +1,25 @@
+@breakpoints {
+  .gtc-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .gtc-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gtc-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gtc-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .gtc-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .gtc-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

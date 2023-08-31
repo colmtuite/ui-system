@@ -2,9 +2,15 @@
 @import 'src/theme.css';
 
 @import 'src/components/badge.css';
+@import 'src/components/box.css';
 @import 'src/components/button.css';
+@import 'src/components/container.css';
+@import 'src/components/em.css';
 @import 'src/components/flex.css';
+@import 'src/components/grid.css';
+@import 'src/components/section.css';
 @import 'src/components/status.css';
+@import 'src/components/sup.css';
 @import 'src/components/text.css';
 
 @import 'src/utilities/align-items.css';
@@ -15,6 +21,8 @@
 @import 'src/utilities/flex-shrink.css';
 @import 'src/utilities/flex-wrap.css';
 @import 'src/utilities/gap.css';
+@import 'src/utilities/grid-auto-flow.css';
+@import 'src/utilities/grid-template-columns.css';
 @import 'src/utilities/inset.css';
 @import 'src/utilities/justify-content.css';
 @import 'src/utilities/margin.css';

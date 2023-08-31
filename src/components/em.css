@@ -1,0 +1,6 @@
+.Em {
+  box-sizing: border-box;
+  font-family: var(--ff-italic);
+  font-style: italic;
+  color: inherit;
+}
