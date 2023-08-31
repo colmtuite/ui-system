@@ -1,0 +1,61 @@
+@breakpoints {
+  .ds-inset-auto {
+    inset: auto;
+  }
+
+  .ds-top-auto {
+    top: auto;
+  }
+
+  .ds-right-auto {
+    right: auto;
+  }
+
+  .ds-bottom-auto {
+    bottom: auto;
+  }
+
+  .ds-left-auto {
+    left: auto;
+  }
+
+  .ds-inset-0 {
+    inset: 0;
+  }
+
+  .ds-top-0 {
+    top: 0;
+  }
+
+  .ds-right-0 {
+    right: 0;
+  }
+
+  .ds-bottom-0 {
+    bottom: 0;
+  }
+
+  .ds-left-0 {
+    left: 0;
+  }
+
+  .ds-inset-100\% {
+    inset: 100%;
+  }
+
+  .ds-top-100\% {
+    top: 100%;
+  }
+
+  .ds-right-100\% {
+    right: 100%;
+  }
+
+  .ds-bottom-100\% {
+    bottom: 100%;
+  }
+
+  .ds-left-100\% {
+    left: 100%;
+  }
+}

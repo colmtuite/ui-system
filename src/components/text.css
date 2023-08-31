@@ -1,0 +1,87 @@
+.Text {
+  margin: 0;
+}
+
+@breakpoints {
+  .Text.size-1 {
+    font-size: var(--fs-1);
+    line-height: 16px;
+  }
+
+  .Text.size-2 {
+    font-size: var(--fs-2);
+    line-height: 20px;
+  }
+
+  .Text.size-3 {
+    font-size: var(--fs-3);
+    line-height: 24px;
+  }
+
+  .Text.size-4 {
+    font-size: var(--fs-4);
+    line-height: 26px;
+  }
+
+  .Text.size-5 {
+    font-size: var(--fs-5);
+    letter-spacing: -0.01em;
+    line-height: 28px;
+  }
+
+  .Text.size-6 {
+    font-size: var(--fs-6);
+    letter-spacing: -0.018em;
+    line-height: 30px;
+    font-weight: var(--fw-2);
+  }
+
+  .Text.size-7 {
+    font-size: var(--fs-7);
+    letter-spacing: -0.026em;
+    line-height: 36px;
+    font-weight: var(--fw-2);
+  }
+
+  .Text.size-8 {
+    font-size: var(--fs-8);
+    letter-spacing: -0.04em;
+    line-height: 40px;
+    font-weight: var(--fw-2);
+  }
+
+  .Text.size-9 {
+    font-size: var(--fs-9);
+    letter-spacing: -0.056em;
+    line-height: 1;
+    font-weight: var(--fw-2);
+  }
+
+  .Text.gray {
+    color: var(--gray-11);
+  }
+
+  .Text.blue {
+    color: var(--blue-11);
+  }
+
+  .Text.green {
+    color: var(--green-11);
+  }
+
+  .Text.yellow {
+    color: var(--yellow-11);
+  }
+
+  .Text.red {
+    color: var(--red-11);
+  }
+
+  .Text.weight-1 {
+    font-weight: var(--fw-1);
+  }
+
+  .Text.weight-2 {
+    font-weight: var(--fw-2);
+  }
+}

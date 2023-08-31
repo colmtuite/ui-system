@@ -104,10 +104,15 @@ export default function Home() {
           borderWidth: 1,
           borderStyle: "solid",
           borderColor: "var(--gray-a7)",
-          background: 'white',
+          background: "white",
         }}
       >
-        fewfwfwe dwqfw
+        <Text size="2" weight="2">
+          Colm Tuite
+        </Text>
+        <Text size="2" color="gray">
+          CEO & Co-founder, Modulz
+        </Text>
       </div>
     </main>
   );
