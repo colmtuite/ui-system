@@ -1,0 +1,47 @@
+.Flare {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: absolute;
+  height: 1px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 750px;
+}
+
+.Flare.gray {
+  background: linear-gradient(45deg, transparent 10%, var(--gray-8) 50%, transparent 90%);
+}
+
+.Flare.red {
+  background: linear-gradient(45deg, transparent 10%, var(--red-8) 50%, transparent 90%);
+}
+
+.Flare.purple {
+  background: linear-gradient(45deg, transparent 10%, var(--purple-8) 50%, transparent 90%);
+}
+
+.Flare.blue {
+  background: linear-gradient(45deg, transparent 10%, var(--blue-8) 50%, transparent 90%);
+}
+
+.Flare.green {
+  background: linear-gradient(45deg, transparent 10%, var(--green-8) 50%, transparent 90%);
+}
+
+.Flare.yellow {
+  background: linear-gradient(45deg, transparent 10%, var(--yellow-8) 50%, transparent 90%);
+}
+
+.Flare.orange {
+  background: linear-gradient(45deg, transparent 10%, var(--orange-8) 50%, transparent 90%);
+}
+
+.Flare.gold {
+  background: linear-gradient(45deg, transparent 10%, var(--gold-8) 50%, transparent 90%);
+}
+
+.Flare.bronze {
+  background: linear-gradient(45deg, transparent 10%, var(--bronze-8) 50%, transparent 90%);
+}

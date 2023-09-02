@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Container,
+  Flare,
   Flex,
   Grid,
   Section,
@@ -12,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <main style={{ padding: 100 }}>
+    <main>
       <div
         style={{
           position: "fixed",
@@ -22,6 +23,26 @@ export default function Home() {
           backgroundColor: "var(--gray-4)",
         }}
       ></div>
+      <Section>
+        <Container>
+          <Text size="9">Tougher than any smartphone glass</Text>
+          <Text size="5" color="gray">
+            Get €140–€495 in credit towards iPhone 14 Pro when you trade in
+            iPhone 11 or higher.
+          </Text>
+        </Container>
+      </Section>
+      <Section border="both">
+        <Container>
+          <Text size="9">Tougher than any smartphone glass</Text>
+          <Text size="5" color="gray">
+            Get €140–€495 in credit towards iPhone 14 Pro when you trade in
+            iPhone 11 or higher.
+          </Text>
+        </Container>
+        <Flare color="yellow" side="top" />
+        <Flare color="yellow" />
+      </Section>
       <Section>
         <Container>
           <Grid columns="2" gap="9">
@@ -141,28 +162,6 @@ export default function Home() {
         <Status size="2" color="yellow" />
         <Status size="2" color="red" />
       </Flex>
-
-      <div
-        style={{
-          width: 250,
-          height: 80,
-          borderRadius: 12,
-          borderWidth: 1,
-          borderStyle: "solid",
-          borderTopColor: "var(--gray-4)",
-          borderLeftColor: "var(--gray-6)",
-          borderRightColor: "var(--gray-6)",
-          borderBottomColor: "var(--gray-7)",
-          background: "white",
-        }}
-      >
-        <Text size="2" weight="2">
-          Colm Tuite
-        </Text>
-        <Text size="2" color="gray">
-          CEO & Co-founder, Modulz
-        </Text>
-      </div>
     </main>
   );
 }

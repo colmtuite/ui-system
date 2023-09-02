@@ -1,6 +1,7 @@
 .Section {
   box-sizing: border-box;
   flex-shrink: 0;
+  position: relative;
 }
 
 @breakpoints {
@@ -66,4 +67,24 @@
 
 .Section.red-2 {
   background-color: var(--red-2);
+}
+
+.Section.borderTop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--gray-4);
+}
+
+.Section.borderBottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--gray-4);
 }

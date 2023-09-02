@@ -3,6 +3,7 @@ export * from './box';
 export * from './button';
 export * from './container';
 export * from './em';
+export * from './flare';
 export * from './flex';
 export * from './grid';
 export * from './section';
