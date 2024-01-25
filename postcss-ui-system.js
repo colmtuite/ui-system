@@ -18,7 +18,7 @@ const breakpoints = postcss
   .filter(Boolean);
 
 module.exports = () => ({
-  postcssPlugin: 'postcss-workds',
+  postcssPlugin: 'postcss-ui-system',
   AtRule(atrule) {
     if (atrule.name === 'breakpoints') {
       atrule.name = 'media all';

@@ -1,0 +1,49 @@
+.Tabs {
+
+}
+
+.TabList {
+  display: flex;
+  background-color: var(--gray-3);
+  border-radius: 6px;
+  padding: 2px;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.Tab {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  user-select: none;
+  cursor: default;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  color: var(--mauve-text-2);
+  line-height: 1;
+}
+
+.Tab[data-hovered] {
+  background-color: var(--gray-5);
+}
+
+.Tab[data-selected] {
+  background-color: white;
+  /* font-weight: 500; */
+  background-color: white;
+  border-color: var(--gray-a6);
+  box-shadow: 0 1px 2px -1px hsl(263 50% 32% / 12%), 0 1px 4px -3px hsl(263 50% 32% / 12%);
+}
+
+.Tab[data-focus-visible] {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: blue
+}

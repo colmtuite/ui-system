@@ -10,4 +10,5 @@ export * from './section';
 export * from './status';
 export * from './strong';
 export * from './sup';
+export * from './tabs';
 export * from './text';

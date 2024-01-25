@@ -20,6 +20,7 @@
     "postcss-custom-media": "^10.0.0",
     "postcss-import": "^15.1.0",
     "react": "18.2.0",
+    "react-aria-components": "^1.0.1",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
   },

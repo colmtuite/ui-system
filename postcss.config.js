@@ -8,7 +8,7 @@ module.exports = {
         path: [path.relative(process.cwd(), '../')],
       },
     ],
-    require.resolve('./postcss-workds'),
+    require.resolve('./postcss-ui-system'),
     'postcss-hover-media-feature',
     'postcss-custom-media',
   ],

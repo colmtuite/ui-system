@@ -1,25 +1,5 @@
-@keyframes ButtonLoading {
-  0% {
-    background-position-x: 50%;
-    color: var(--button-loading-color-1);
-  }
-
-  25% {
-    background-position-x: 50%;
-  }
-
-  75% {
-    background-position-x: 0%;
-    color: var(--button-loading-color-2);
-  }
-
-  100% {
-    background-position-x: -150%;
-    color: var(--button-loading-color-1);
-  }
-}
-
 .Button {
+  all: unset;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -28,24 +8,9 @@
   flex-shrink: 0;
   line-height: 1;
   user-select: none;
-}
-
-.Button.ghost {
-  font-weight: normal;
-}
-
-.Button.state-disabled {
-  cursor: not-allowed;
-}
-
-.Button.state-loading {
-  cursor: progress;
-  background-size: 200% auto;
-  background-position-x: 50%;
-  animation: ButtonLoading 2s 1s infinite ease-in;
-
-  /* Workaround for the macOS bug when the progress cursor won't spin until the animation starts. */
-  contain: style;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  background-clip: padding-box;
 }
 
 .Button.size-1 {
@@ -75,301 +40,128 @@
   gap: var(--space-3);
 }
 
-.Button.gray {
-  background-color: var(--gray-3);
-  color: var(--gray-12);
+.Button.gray,
+.Button.green,
+.Button.red {
+  background-color: white;
+  color: var(--mauve-text-2);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--gray-a6);
+  box-shadow: 0 1px 2px -1px hsl(263 50% 32% / 12%), 0 1px 4px -3px hsl(263 50% 32% / 12%);
 }
 
-.Button.gray svg {
-  color: var(--gray-a11);
+.Button.gray[data-hovered],
+.Button.green[data-hovered],
+.Button.red[data-hovered] {
+  border-color: var(--gray-a7);
+  box-shadow: 0 1px 2px -1px hsl(263 50% 32% / 12%), 0 1px 4px -1px hsl(263 50% 32% / 12%);
 }
 
-.Button.gray:hover,
-.Button.gray[data-state='open'] {
-  background-color: var(--gray-4);
-}
-
-.Button.gray:active {
-  background-color: var(--gray-5);
-}
-
-.Button.gray:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--gray-a8), 0 0 0 1px var(--gray-a8);
-}
-
-.Button.gray:active:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--gray-a9), 0 0 0 1px var(--gray-a8);
-}
-
-.Button.gray.state-disabled,
-.Button.gray.state-loading {
-  background-color: var(--gray-a3);
-  box-shadow: inset 0 0 0 1px var(--gray-a5);
-  color: var(--gray-a8);
-}
-
-.Button.gray.state-disabled svg,
-.Button.gray.state-loading svg {
-  color: currentcolor;
-}
-
-.Button.gray.state-disabled:focus-visible,
-.Button.gray.state-loading:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--gray-a8), 0 0 0 1px var(--gray-a8);
-}
-
-.Button.gray.state-loading {
-  --button-loading-color-1: var(--gray-a8);
-  --button-loading-color-2: var(--gray-a5);
-  background-image: linear-gradient(to right, transparent, var(--gray-a3));
-}
-
-.Button.gray.ghost {
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--gray-a11);
-}
-
-.Button.gray.ghost:hover,
-.Button.gray.ghost[data-state='open'] {
-  background-color: var(--gray-a3);
-}
-
-.Button.gray.ghost:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--gray-a8), 0 0 0 1px var(--gray-a8);
-}
-
-.Button.gray.ghost:active {
-  background-color: var(--gray-a4);
-}
-
-.Button.gray.ghost.state-disabled,
-.Button.gray.ghost.state-loading {
-  background-color: var(--gray-a3);
-  color: var(--gray-a8);
+.Button.gray[data-pressed],
+.Button.green[data-pressed],
+.Button.red[data-pressed] {
+  background-color: var(--mauve-area-1);
+  border-color: var(--gray-a7);
+  box-shadow: inset 0 1px 2px -.5px hsl(263 50% 32% / 12%);
 }
 
 .Button.blue {
-  background-color: var(--blue-9);
-  box-shadow: inset 0 0 0 1px var(--blue-3);
+  background-color: var(--blue-pure-1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--blue-pure-3);
+  box-shadow: 0 1px 2px -1px hsl(263 50% 32% / 12%), 0 1px 4px -3px hsl(263 50% 32% / 12%), inset 1px 1px 0 0 rgba(255,255,255,.3);
   color: white;
 }
 
-.Button.blue svg {
-  opacity: 0.8;
+.Button.blue[data-hovered] {
+  background-color: var(--blue-pure-2);
+  box-shadow: 0 1px 2px -1px hsl(263 50% 32% / 12%), 0 1px 4px -1px hsl(263 50% 32% / 12%), inset 1px 1px 0 0 rgba(255, 255, 255, .3);
 }
 
-.Button.blue:hover,
-.Button.blue[data-state='open'] {
-  background-color: var(--blue-10);
+.Button.blue[data-pressed] {
+  background-color: var(--blue-pure-2);
   box-shadow: inset 0 0 0 1px var(--blue-5);
-}
-
-.Button.blue:active {
-  background-color: var(--blue-9);
-  box-shadow: inset 0 0 0 1px var(--blue-5);
-}
-
-.Button.blue:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--blue-7), 0 0 0 1px var(--blue-8);
-}
-
-.Button.blue.state-disabled,
-.Button.blue.state-loading {
-  background-color: var(--blue-3);
-  box-shadow: inset 0 0 0 1px var(--blue-5);
-  color: var(--blue-8);
-}
-
-.Button.blue.state-disabled svg,
-.Button.blue.state-loading svg {
-  color: currentcolor;
-}
-
-.Button.blue.state-disabled:focus-visible,
-.Button.blue.state-loading:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--blue-8), 0 0 0 1px var(--blue-8);
-}
-
-.Button.blue.state-loading {
-  --button-loading-color-1: var(--blue-8);
-  --button-loading-color-2: var(--blue-5);
-  background-image: linear-gradient(to right, transparent, var(--blue-3));
-}
-
-.Button.blue.ghost {
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--blue-11);
-}
-
-.Button.blue.ghost svg {
-  opacity: 1;
-}
-
-.Button.blue.ghost:hover,
-.Button.blue.ghost[data-state='open'] {
-  background-color: var(--blue-3);
-}
-
-.Button.blue.ghost:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--blue-8), 0 0 0 1px var(--blue-8);
-}
-
-.Button.blue.ghost:active {
-  background-color: var(--blue-4);
-}
-
-.Button.blue.ghost.state-disabled,
-.Button.blue.ghost.state-loading {
-  background-color: var(--blue-3);
-  color: var(--blue-8);
 }
 
 .Button.green {
-  background-color: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--gray-7);
   color: var(--green-11);
 }
 
-.Button.green:hover,
-.Button.green[data-state='open'] {
-  background-color: var(--green-1);
-  box-shadow: inset 0 0 0 1px var(--green-8);
+.Button.red {
+  color: var(--red-11);
 }
 
-.Button.green:active {
-  box-shadow: inset 0 0 0 1px var(--green-9);
+.Button.ghost {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  color: var(--gray-a11);
 }
 
-.Button.green:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--green-8), 0 0 0 1px var(--green-8);
+.Button.ghost[data-hovered] {
+  box-shadow: none;
 }
 
-.Button.green:active:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--green-9), 0 0 0 1px var(--green-8);
+.Button.gray.ghost {
+  color: var(--gray-a11);
 }
 
-.Button.green.state-disabled,
-.Button.green.state-loading {
+.Button.gray.ghost[data-hovered] {
   background-color: var(--gray-a3);
-  box-shadow: inset 0 0 0 1px var(--gray-a5);
-  color: var(--gray-a8);
 }
 
-.Button.green.state-disabled svg,
-.Button.green.state-loading svg {
-  color: currentcolor;
+.Button.gray.ghost[data-pressed] {
+  background-color: var(--gray-a4);
 }
 
-.Button.green.state-loading {
-  --button-loading-color-1: var(--gray-a8);
-  --button-loading-color-2: var(--gray-a5);
-  background-image: linear-gradient(to right, transparent, var(--gray-a3));
+.Button.blue.ghost {
+  color: var(--blue-text-1);
+}
+
+.Button.blue.ghost[data-hovered] {
+  background-color: var(--blue-bg-3);
+}
+
+.Button.blue.ghost[data-pressed] {
+  background-color: var(--blue-bg-4);
 }
 
 .Button.green.ghost {
-  background-color: transparent;
-  box-shadow: none;
   color: var(--green-11);
 }
 
-.Button.green.ghost:hover,
-.Button.green.ghost[data-state='open'] {
+.Button.green.ghost[data-hovered] {
   background-color: var(--green-3);
 }
 
-.Button.green.ghost:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--green-8), 0 0 0 1px var(--green-8);
-}
-
-.Button.green.ghost:active {
+.Button.green.ghost[data-pressed] {
   background-color: var(--green-4);
 }
 
-.Button.green.ghost.state-disabled,
-.Button.green.ghost.state-loading {
-  background-color: var(--gray-a3);
-  color: var(--gray-a8);
-}
-
-.Button.green.state-disabled:focus-visible,
-.Button.green.state-loading:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--gray-a8), 0 0 0 1px var(--gray-a8);
-}
-
-
-
-
-
-.Button.red {
-  background-color: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--gray-7);
-  color: var(--red-11);
-}
-
-.Button.red:hover,
-.Button.red[data-state='open'] {
-  background-color: var(--red-1);
-  box-shadow: inset 0 0 0 1px var(--red-8);
-}
-
-.Button.red:active {
-  box-shadow: inset 0 0 0 1px var(--red-9);
-}
-
-.Button.red:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--red-8), 0 0 0 1px var(--red-8);
-}
-
-.Button.red:active:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--red-9), 0 0 0 1px var(--red-8);
-}
-
-.Button.red.state-disabled,
-.Button.red.state-loading {
-  background-color: var(--gray-a3);
-  box-shadow: inset 0 0 0 1px var(--gray-a5);
-  color: var(--gray-a8);
-}
-
-.Button.red.state-disabled svg,
-.Button.red.state-loading svg {
-  color: currentcolor;
-}
-
-.Button.red.state-loading {
-  --button-loading-color-1: var(--gray-a8);
-  --button-loading-color-2: var(--gray-a5);
-  background-image: linear-gradient(to right, transparent, var(--gray-a3));
-}
-
 .Button.red.ghost {
-  background-color: transparent;
-  box-shadow: none;
   color: var(--red-11);
 }
 
-.Button.red.ghost:hover,
-.Button.red.ghost[data-state='open'] {
+.Button.red.ghost[data-hovered] {
   background-color: var(--red-3);
 }
 
-.Button.red.ghost:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--red-8), 0 0 0 1px var(--red-8);
-}
-
-.Button.red.ghost:active {
+.Button.red.ghost[data-pressed] {
   background-color: var(--red-4);
 }
 
-.Button.red.ghost.state-disabled,
-.Button.red.ghost.state-loading {
-  background-color: var(--gray-a3);
-  color: var(--gray-a8);
+.Button[data-focus-visible] {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--blue-stroke-4);
+  outline-offset: 2px;
 }
 
-.Button.red.state-disabled:focus-visible,
-.Button.red.state-loading:focus-visible {
-  box-shadow: inset 0 0 0 1px var(--gray-a8), 0 0 0 1px var(--gray-a8);
+.Button[data-disabled] {
+  background-color: var(--gray-a2);
+  border-color: var(--gray-a6);
+  color: var(--gray-a8);
+  cursor: not-allowed;
 }

@@ -2,7 +2,7 @@ export type Breakpoints = 'initial' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type Responsive<T> = T | Partial<Record<Breakpoints, T>>;
 
 /**
- * A helper to generate CSS classes that include WorkDS breakpoints.
+ * A helper to generate CSS classes that include UI System breakpoints.
  *
  * Examples:
  * ```

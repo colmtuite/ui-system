@@ -12,12 +12,6 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html,
 body {
 }
@@ -45,4 +39,63 @@ body {
   margin: 0;
   cursor: default;
   -webkit-tap-highlight-color: transparent;
+}
+
+
+.Card {
+  padding: var(--space-5);
+  border-radius: var(--br-3);
+  background-color: white;
+  
+}
+
+
+
+
+
+.MenuItem {
+  box-sizing: border-box;
+  cursor: default;
+  border-radius: 6px;
+  outline: none;
+  min-height: 32px;
+  font-size: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  user-select: none;
+}
+
+.MenuHeader {
+  font-size: 14px;
+  font-weight: 500;
+  user-select: none;
+}
+
+.MenuItem[data-focused] {
+  background-color: black;
+  color: white;
+}
+
+.MenuItem[data-selection-mode] {
+  padding-left: 32px;
+}
+
+.Popover {
+  box-shadow: 0 5px 15px rgba(0,0,0,.3);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.Separator {
+  height: 1px;
+  box-sizing: border-box;
+  background-color: gainsboro;
+  margin: 6px 12px;
+}
+
+.MenuKbd {
+  font-size: 14px;
 }
