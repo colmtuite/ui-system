@@ -14,6 +14,7 @@ import {
   Tab,
   TabList,
   TabPanel,
+  Switch,
 } from "../components";
 
 import {
@@ -38,6 +39,14 @@ export default function Home() {
   return (
     <main>
       <Flex gap="6" m="8" wrap="wrap">
+        <Switch size="1" />
+        <Switch size="2" />
+        <Switch size="3" />
+
+        <Switch color="gray" />
+        <Switch color="blue" />
+        <Switch color="green" />
+        <Switch color="red" />
         <Tabs>
           <TabList aria-label="History of Ancient Rome">
             <Tab id="1">Feed</Tab>

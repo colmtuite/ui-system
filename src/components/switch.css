@@ -1,0 +1,83 @@
+.Switch {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: block;
+}
+
+.Switch.size-1 {
+  width: 30px;
+  height: 16px;
+}
+
+.Switch.size-2 {
+  width: 38px;
+  height: 20px;
+}
+
+.Switch.size-3 {
+  width: 42px;
+  height: 24px;
+}
+
+.SwitchIndicator {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--gray-4);
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--gray-a7);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  transition-property: background-color, border-color;
+  transition-duration: 175ms;
+  transition-timing-function: ease;
+  height: 100%;
+  width: 100%;
+}
+
+.SwitchIndicator::before {
+  content: "";
+  background: white;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  transition-property: transform;
+  transition-duration: 175ms;
+  transition-timing-function: ease;
+  display: block;
+  box-shadow: 0 1px 2px -1px hsl(263 50% 32% / 12%), 0 1px 4px -3px hsl(263 50% 32% / 12%);
+}
+
+.Switch[data-selected] .SwitchIndicator::before {
+  transform: translate(100%);
+}
+
+.Switch[data-focus-visible] .SwitchIndicator {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--blue-pure-1);
+  outline-offset: 2px;
+}
+
+.Switch.gray[data-selected] .SwitchIndicator {
+  background-color: var(--gray-9);
+  border-color: var(--gray-9);
+}
+
+.Switch.green[data-selected] .SwitchIndicator {
+  background-color: var(--green-9);
+  border-color: var(--green-9);
+}
+
+.Switch.blue[data-selected] .SwitchIndicator {
+  background-color: var(--blue-pure-1);
+  border-color: var(--blue-pure-1);
+}
+
+.Switch.red[data-selected] .SwitchIndicator {
+  background-color: var(--red-9);
+  border-color: var(--red-9);
+}
